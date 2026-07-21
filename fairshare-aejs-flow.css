@@ -18,11 +18,11 @@
   max-width: 640px !important;
   padding: 18px 18px 16px;
   margin: 0 0 24px 24px !important;
-  border: none !important;
+  border: 1px solid #e4e2ed !important;
   border-radius: 8px !important;
   background: var(--ae-oao-panel) !important;
   color: var(--ae-oao-text) !important;
-  box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.1) !important;
+  box-shadow: none !important;
   font-family: "Figtree Variable", Tahoma, sans-serif;
 }
 
@@ -93,13 +93,13 @@
   letter-spacing: 0.02em;
   line-height: 1.2;
   text-transform: none;
-  box-shadow: 0 16px 30px rgba(50, 59, 86, 0.2) !important;
+  box-shadow: none !important;
   text-decoration: none !important;
   margin-left: 4px !important;
   margin-bottom: 4px !important;
   /* icon-only treatment */
-  width: 44px !important;
-  height: 44px !important;
+  width: 60px !important;
+  height: 60px !important;
   padding: 0 !important;
   display: flex !important;
   align-items: center !important;
@@ -111,8 +111,8 @@
 .cc-revoke::before {
   content: "" !important;
   display: block !important;
-  width: 22px !important;
-  height: 22px !important;
+  width: 32px !important;
+  height: 32px !important;
   background-image: url("https://cdn.prod.website-files.com/6a1f5d356c040e30db0b24b7/6a5fa77c6cc9f557247d5d4f_cookie-preferences.webp") !important;
   background-size: contain !important;
   background-repeat: no-repeat !important;
@@ -139,7 +139,7 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 .authenty .ae-btn-primary {
   border: 1px solid #abdad2 !important;
   border-radius: 8px !important;
-  background: linear-gradient(to right, #eaf6f4, #fff8ef) !important;
+  background: #ffffff !important;
   color: #323b56 !important;
   font-weight: 600 !important;
   box-shadow: none !important;
@@ -152,7 +152,7 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 .authenty .btn-primary:hover,
 .authenty button[type="submit"]:hover,
 .authenty .ae-btn-primary:hover {
-  background: linear-gradient(to right, #abdad2, #ffe4bf) !important;
+  background: linear-gradient(to right, #eaf6f4, #fff8ef) !important;
   border-color: #abdad2 !important;
   color: #323b56 !important;
 }
@@ -176,6 +176,7 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 
 .cc-window .cc-deny:hover,
 .cc-window .cc-customize:hover,
+.cc-window .cc-btn.cc-dismiss:hover,
 #cookie-preferences-modal .aejs-tab-btn:hover,
 #cookie-pref-cancel:hover,
 .authenty .btn-default:hover,
@@ -209,18 +210,21 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 #cookie-preferences-overlay {
   background: rgba(50, 59, 86, 0.5);
   backdrop-filter: blur(4px);
+  justify-content: flex-start !important;
+  padding-left: 60px !important;
 }
 
 #cookie-preferences-modal,
 .cookie-preferences-modal {
   width: min(760px, calc(100vw - 32px));
-  border: 1px solid var(--ae-oao-line) !important;
+  border: 1px solid #e4e2ed !important;
   border-radius: 8px !important;
   overflow: hidden !important;
   background: var(--ae-oao-panel) !important;
   color: var(--ae-oao-text) !important;
   box-shadow: var(--ae-oao-shadow) !important;
   font-family: "Figtree Variable", Tahoma, sans-serif;
+  margin-right: auto !important;
 }
 
 #cookie-preferences-modal .modal-header {
@@ -242,9 +246,9 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 
 #cookie-preferences-modal .aejs-tab-btn {
   padding: 11px 16px;
-  border: 1px solid var(--ae-oao-line) !important;
-  border-radius: 18px !important;
-  background: transparent !important;
+  border: 1px solid #e4e2ed !important;
+  border-radius: 8px !important;
+  background: #ffffff !important;
   color: var(--ae-oao-muted) !important;
   font-family: "Figtree Variable", Tahoma, sans-serif;
   font-size: 0.84rem;
@@ -253,9 +257,8 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 }
 
 #cookie-preferences-modal .aejs-tab-active {
-  border-color: var(--ae-oao-accent) !important;
-  border-bottom: 3px solid var(--ae-oao-accent) !important;
-  background: rgba(68, 193, 169, 0.14) !important;
+  border-color: #abdad2 !important;
+  background: #f9fdfc !important;
   color: var(--ae-oao-text) !important;
 }
 
@@ -271,9 +274,24 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 #cookie-preferences-modal .form-check {
   margin-bottom: 16px;
   padding: 16px 18px;
-  border: 1px solid rgba(68, 193, 169, 0.16);
-  border-radius: 18px;
-  background: rgba(68, 193, 169, 0.03);
+  border-radius: 8px !important;
+}
+
+/* Strictly Necessary row (identified by its always-on, disabled checkbox) */
+#cookie-preferences-modal .form-check:has(input:disabled) {
+  border: 1px solid #e4e2ed !important;
+  background: #f4f4f9 !important;
+}
+
+/* Analytics / Marketing rows */
+#cookie-preferences-modal .form-check:has(input:not(:disabled)) {
+  border: 1px solid #abdad2 !important;
+  background: #ffffff !important;
+}
+
+#cookie-preferences-modal .form-check:has(input:not(:disabled):checked) {
+  border-color: #abdad2 !important;
+  background: #f9fdfc !important;
 }
 
 #cookie-preferences-modal .form-check label,
@@ -284,19 +302,53 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 }
 
 #cookie-preferences-modal input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 18px !important;
+  height: 18px !important;
   margin-top: 2px;
-  accent-color: var(--ae-oao-accent) !important;
+  border-radius: 2px !important;
+  border: 1px solid #e4e2ed !important;
+  background: #ffffff !important;
+  position: relative !important;
+  cursor: pointer;
 }
 
 #cookie-preferences-modal input[type="checkbox"]:checked {
-  accent-color: var(--ae-oao-accent) !important;
+  background: #ffffff !important;
+  border: 1px solid #44c1a9 !important;
+}
+
+#cookie-preferences-modal input[type="checkbox"]:checked::after {
+  content: "" !important;
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 9px;
+  border: solid #44c1a9;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 #cookie-preferences-modal input[type="checkbox"]:disabled {
-  opacity: 1;
-  filter: saturate(1.1);
+  background: #c0becc !important;
+  border: 1px solid #e4e2ed !important;
+  border-radius: 2px !important;
+  opacity: 1 !important;
+  cursor: default;
+}
+
+#cookie-preferences-modal input[type="checkbox"]:disabled::after {
+  content: "" !important;
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 9px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 #cookie-preferences-modal .aejs-modal-actions {
