@@ -91,20 +91,20 @@
   box-shadow: 0 16px 30px rgba(50, 59, 86, 0.2) !important;
   text-decoration: none !important;
   /* icon-only treatment */
-  width: 44px;
-  height: 44px;
+  width: 44px !important;
+  height: 44px !important;
   padding: 0 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0;
-  overflow: hidden;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0 !important;
+  overflow: hidden !important;
 }
 
 .cc-revoke::before {
-  content: "🍪";
-  font-size: 22px;
-  line-height: 1;
+  content: "🍪" !important;
+  font-size: 22px !important;
+  line-height: 1 !important;
 }
 
 .cc-window .cc-btn,
@@ -197,6 +197,7 @@
   justify-content: space-between;
   gap: 14px;
   padding: 24px 24px 18px;
+  background: var(--ae-oao-panel) !important;
   border-bottom: 1px solid rgba(68, 193, 169, 0.18);
 }
 
@@ -231,6 +232,7 @@
 #cookie-preferences-modal #purposes-body,
 #cookie-preferences-modal #vendors-body {
   padding: 22px 24px;
+  background: var(--ae-oao-panel) !important;
   color: var(--ae-oao-muted) !important;
 }
 
@@ -271,6 +273,7 @@
   justify-content: flex-end;
   gap: 12px;
   padding: 22px 24px 24px;
+  background: var(--ae-oao-panel) !important;
   border-top: 1px solid rgba(68, 193, 169, 0.16);
 }
 
