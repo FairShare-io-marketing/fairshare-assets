@@ -107,6 +107,12 @@
   line-height: 1 !important;
 }
 
+/* Hide the floating reopen icon while the main banner bar is showing, avoids two overlapping cookie controls at once */
+body:has(.cc-window) .cc-revoke,
+body:has(.cc-banner) .cc-revoke {
+  display: none !important;
+}
+
 .cc-window .cc-btn,
 #cookie-pref-save,
 #cookie-preferences-modal .btn-primary,
