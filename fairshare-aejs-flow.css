@@ -15,7 +15,7 @@
 .cc-window,
 .cc-banner,
 .cookie-consent-bar {
-  max-width: 640px !important;
+  max-width: 760px !important;
   padding: 18px 18px 16px;
   margin: 0 0 24px 24px !important;
   border: 1px solid #e4e2ed !important;
@@ -234,7 +234,7 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
   gap: 14px;
   padding: 24px 24px 18px;
   background: var(--ae-oao-panel) !important;
-  border-bottom: 1px solid rgba(68, 193, 169, 0.18);
+  border-bottom: 1px solid #f4f4f9 !important;
 }
 
 #cookie-preferences-modal .aejs-tab-row {
@@ -251,12 +251,19 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
   background: #ffffff !important;
   color: var(--ae-oao-muted) !important;
   font-family: "Figtree Variable", Tahoma, sans-serif;
-  font-size: 0.84rem;
+  font-size: 1rem !important;
   letter-spacing: 0.02em;
   text-transform: none;
 }
 
 #cookie-preferences-modal .aejs-tab-active {
+  border-color: #abdad2 !important;
+  background: #f9fdfc !important;
+  color: var(--ae-oao-text) !important;
+}
+
+/* Keep the active tab looking the same on hover, no separate hover treatment once selected */
+#cookie-preferences-modal .aejs-tab-active:hover {
   border-color: #abdad2 !important;
   background: #f9fdfc !important;
   color: var(--ae-oao-text) !important;
@@ -358,7 +365,7 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
   gap: 12px;
   padding: 22px 24px 24px;
   background: var(--ae-oao-panel) !important;
-  border-top: 1px solid rgba(68, 193, 169, 0.16);
+  border-top: 1px solid #f4f4f9 !important;
 }
 
 #cookie-preferences-modal .form-check-input,
@@ -423,7 +430,7 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 
 .authenty .close,
 #cookie-preferences-modal .close {
-  color: var(--ae-oao-accent-soft) !important;
+  color: #5a5a5a !important;
   opacity: 1 !important;
 }
 
