@@ -210,8 +210,6 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 #cookie-preferences-overlay {
   background: rgba(50, 59, 86, 0.5);
   backdrop-filter: blur(4px);
-  justify-content: flex-start !important;
-  padding-left: 60px !important;
 }
 
 #cookie-preferences-modal,
@@ -224,7 +222,9 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
   color: var(--ae-oao-text) !important;
   box-shadow: var(--ae-oao-shadow) !important;
   font-family: "Figtree Variable", Tahoma, sans-serif;
-  margin-right: auto !important;
+  /* AEJS centers this with left: 50% + transform: translateX(-50%); overriding both to pin it to the left instead */
+  left: 60px !important;
+  transform: none !important;
 }
 
 #cookie-preferences-modal .modal-header {
