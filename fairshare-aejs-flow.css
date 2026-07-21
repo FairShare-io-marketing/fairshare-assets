@@ -17,17 +17,17 @@
 .cookie-consent-bar {
   max-width: 420px;
   padding: 18px 18px 16px;
-  border: 1px solid var(--ae-oao-line);
+  border: 1px solid var(--ae-oao-line) !important;
   border-radius: var(--ae-oao-radius);
-  background: var(--ae-oao-panel);
-  color: var(--ae-oao-text);
-  box-shadow: var(--ae-oao-shadow);
+  background: var(--ae-oao-panel) !important;
+  color: var(--ae-oao-text) !important;
+  box-shadow: var(--ae-oao-shadow) !important;
   font-family: "Figtree Variable", Tahoma, sans-serif;
 }
 
 .cc-window .cc-message,
 .cc-window .cc-message h3 {
-  color: var(--ae-oao-text);
+  color: var(--ae-oao-text) !important;
 }
 
 .cc-window .cc-message {
@@ -58,7 +58,7 @@
 .authenty .panel-heading,
 .authenty .modal-title {
   margin: 0 0 10px;
-  color: var(--ae-oao-text);
+  color: var(--ae-oao-text) !important;
   font-family: "Figtree Variable", Tahoma, sans-serif;
   letter-spacing: 0.02em;
   text-transform: none;
@@ -67,7 +67,7 @@
 .cc-window .cc-link,
 #cookie-preferences-modal a,
 .authenty a {
-  color: var(--ae-oao-accent-soft);
+  color: var(--ae-oao-accent-soft) !important;
 }
 
 .cc-window .cc-compliance {
@@ -183,11 +183,11 @@
 #cookie-preferences-modal,
 .cookie-preferences-modal {
   width: min(760px, calc(100vw - 32px));
-  border: 1px solid var(--ae-oao-line);
+  border: 1px solid var(--ae-oao-line) !important;
   border-radius: var(--ae-oao-radius);
-  background: var(--ae-oao-panel);
-  color: var(--ae-oao-text);
-  box-shadow: var(--ae-oao-shadow);
+  background: var(--ae-oao-panel) !important;
+  color: var(--ae-oao-text) !important;
+  box-shadow: var(--ae-oao-shadow) !important;
   font-family: "Figtree Variable", Tahoma, sans-serif;
 }
 
@@ -231,7 +231,7 @@
 #cookie-preferences-modal #purposes-body,
 #cookie-preferences-modal #vendors-body {
   padding: 22px 24px;
-  color: var(--ae-oao-muted);
+  color: var(--ae-oao-muted) !important;
 }
 
 #cookie-preferences-modal .form-check {
@@ -246,7 +246,7 @@
 #cookie-preferences-modal li label,
 #cookie-preferences-modal b,
 #cookie-preferences-modal strong {
-  color: var(--ae-oao-text);
+  color: var(--ae-oao-text) !important;
 }
 
 #cookie-preferences-modal input[type="checkbox"] {
@@ -304,7 +304,7 @@
 #cookie-preferences-modal label strong {
   display: block;
   margin-bottom: 4px;
-  color: var(--ae-oao-text);
+  color: var(--ae-oao-text) !important;
   font-size: 1rem;
   font-weight: 700;
 }
@@ -312,7 +312,7 @@
 #cookie-preferences-modal .purpose-copy,
 #cookie-preferences-modal small,
 #cookie-preferences-modal .vendor-description {
-  color: var(--ae-oao-muted);
+  color: var(--ae-oao-muted) !important;
   line-height: 1.55;
 }
 
