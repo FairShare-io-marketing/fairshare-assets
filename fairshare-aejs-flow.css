@@ -15,8 +15,9 @@
 .cc-window,
 .cc-banner,
 .cookie-consent-bar {
-  max-width: 420px;
+  max-width: 380px !important;
   padding: 18px 18px 16px;
+  margin: 0 0 24px 24px !important;
   border: none !important;
   border-radius: var(--ae-oao-radius);
   background: var(--ae-oao-panel) !important;
@@ -118,9 +119,10 @@
   background-position: center !important;
 }
 
-/* Hide the floating reopen icon while the main banner bar is showing, avoids two overlapping cookie controls at once */
-body:has(.cc-window) .cc-revoke,
-body:has(.cc-banner) .cc-revoke {
+/* Hide the floating reopen icon while the main banner bar is showing, avoids two overlapping cookie controls at once.
+   AEJS keeps .cc-window in the DOM after dismissal and just adds .cc-invisible, so we must exclude that state
+   or the icon stays hidden forever after the banner is closed. */
+body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
   display: none !important;
 }
 
@@ -140,15 +142,13 @@ body:has(.cc-banner) .cc-revoke {
 }
 
 .cc-window .cc-btn:hover,
-.cc-revoke:hover,
-#cookie-preferences-modal button:hover,
 #cookie-pref-save:hover,
 #cookie-preferences-modal .btn-primary:hover,
 .authenty .btn-primary:hover,
 .authenty button[type="submit"]:hover,
 .authenty .ae-btn-primary:hover {
-  background: #a8e0d4 !important;
-  border-color: #a8e0d4 !important;
+  background: linear-gradient(to right, #abdad2, #ffe4bf) !important;
+  border-color: #abdad2 !important;
   color: #323b56 !important;
 }
 
@@ -177,7 +177,7 @@ body:has(.cc-banner) .cc-revoke {
 .authenty .btn-secondary:hover,
 .authenty .ae-btn:hover {
   border-color: var(--ae-oao-accent) !important;
-  background: rgba(68, 193, 169, 0.12) !important;
+  background: #f4f4f9 !important;
   color: var(--ae-oao-text) !important;
 }
 
