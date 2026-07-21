@@ -15,11 +15,11 @@
 .cc-window,
 .cc-banner,
 .cookie-consent-bar {
-  max-width: 380px !important;
+  max-width: 640px !important;
   padding: 18px 18px 16px;
   margin: 0 0 24px 24px !important;
   border: none !important;
-  border-radius: var(--ae-oao-radius);
+  border-radius: 8px !important;
   background: var(--ae-oao-panel) !important;
   color: var(--ae-oao-text) !important;
   box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.1) !important;
@@ -77,15 +77,15 @@
 
 .cc-window .cc-compliance {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap !important;
   gap: 10px;
   margin-top: 14px;
 }
 
 .cc-revoke {
-  border: 1px solid var(--ae-oao-accent) !important;
+  border: 1px solid #e4e2ed !important;
   border-radius: 999px !important;
-  background: var(--ae-oao-accent) !important;
+  background: #ffffff !important;
   color: #323b56 !important;
   font-family: "Figtree Variable", Tahoma, sans-serif;
   font-size: 0.78rem;
@@ -117,6 +117,11 @@
   background-size: contain !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+}
+
+.cc-revoke:hover {
+  background: #eaf6f3 !important;
+  border-color: #abdad2 !important;
 }
 
 /* Hide the floating reopen icon while the main banner bar is showing, avoids two overlapping cookie controls at once.
@@ -176,21 +181,29 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 .authenty .btn-default:hover,
 .authenty .btn-secondary:hover,
 .authenty .ae-btn:hover {
-  border-color: var(--ae-oao-accent) !important;
+  border-color: #e4e2ed !important;
   background: #f4f4f9 !important;
   color: var(--ae-oao-text) !important;
 }
 
-.cc-window .cc-btn:focus,
-.cc-revoke:focus,
-#cookie-preferences-modal button:focus,
-#cookie-preferences-modal .aejs-tab-btn:focus,
-#cookie-preferences-modal input[type="checkbox"]:focus,
-.authenty button:focus,
-.authenty input:focus,
-.authenty select:focus {
-  outline: 2px solid var(--ae-oao-accent-soft) !important;
+.cc-window .cc-btn:focus-visible,
+.cc-revoke:focus-visible,
+#cookie-preferences-modal button:focus-visible,
+#cookie-preferences-modal .aejs-tab-btn:focus-visible,
+#cookie-preferences-modal input[type="checkbox"]:focus-visible,
+.authenty button:focus-visible,
+.authenty input:focus-visible,
+.authenty select:focus-visible {
+  outline: 2px solid #abdad2 !important;
   outline-offset: 2px !important;
+}
+
+.cc-window .cc-btn:focus:not(:focus-visible),
+.cc-revoke:focus:not(:focus-visible),
+#cookie-preferences-modal button:focus:not(:focus-visible),
+#cookie-preferences-modal .aejs-tab-btn:focus:not(:focus-visible),
+.authenty button:focus:not(:focus-visible) {
+  outline: none !important;
 }
 
 #cookie-preferences-overlay {
@@ -202,7 +215,8 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 .cookie-preferences-modal {
   width: min(760px, calc(100vw - 32px));
   border: 1px solid var(--ae-oao-line) !important;
-  border-radius: var(--ae-oao-radius);
+  border-radius: 8px !important;
+  overflow: hidden !important;
   background: var(--ae-oao-panel) !important;
   color: var(--ae-oao-text) !important;
   box-shadow: var(--ae-oao-shadow) !important;
