@@ -17,11 +17,11 @@
 .cookie-consent-bar {
   max-width: 420px;
   padding: 18px 18px 16px;
-  border: 1px solid var(--ae-oao-line) !important;
+  border: none !important;
   border-radius: var(--ae-oao-radius);
   background: var(--ae-oao-panel) !important;
   color: var(--ae-oao-text) !important;
-  box-shadow: var(--ae-oao-shadow) !important;
+  box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.1) !important;
   font-family: "Figtree Variable", Tahoma, sans-serif;
 }
 
@@ -64,7 +64,11 @@
   text-transform: none;
 }
 
-.cc-window .cc-link,
+.cc-window .cc-link {
+  color: #bc1d52 !important;
+  font-weight: 700 !important;
+}
+
 #cookie-preferences-modal a,
 .authenty a {
   color: var(--ae-oao-accent-soft) !important;
@@ -90,6 +94,8 @@
   text-transform: none;
   box-shadow: 0 16px 30px rgba(50, 59, 86, 0.2) !important;
   text-decoration: none !important;
+  margin-left: 4px !important;
+  margin-bottom: 4px !important;
   /* icon-only treatment */
   width: 44px !important;
   height: 44px !important;
@@ -102,9 +108,14 @@
 }
 
 .cc-revoke::before {
-  content: "🍪" !important;
-  font-size: 22px !important;
-  line-height: 1 !important;
+  content: "" !important;
+  display: block !important;
+  width: 22px !important;
+  height: 22px !important;
+  background-image: url("https://cdn.prod.website-files.com/6a1f5d356c040e30db0b24b7/6a5fa77c6cc9f557247d5d4f_cookie-preferences.webp") !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
 
 /* Hide the floating reopen icon while the main banner bar is showing, avoids two overlapping cookie controls at once */
@@ -119,11 +130,11 @@ body:has(.cc-banner) .cc-revoke {
 .authenty .btn-primary,
 .authenty button[type="submit"],
 .authenty .ae-btn-primary {
-  border: 1px solid var(--ae-oao-accent) !important;
-  border-radius: 999px !important;
-  background: var(--ae-oao-accent) !important;
+  border: 1px solid #abdad2 !important;
+  border-radius: 8px !important;
+  background: linear-gradient(to right, #eaf6f4, #fff8ef) !important;
   color: #323b56 !important;
-  font-weight: 800 !important;
+  font-weight: 600 !important;
   box-shadow: none !important;
   text-shadow: none !important;
 }
@@ -150,10 +161,11 @@ body:has(.cc-banner) .cc-revoke {
 .authenty .btn-default,
 .authenty .btn-secondary,
 .authenty .ae-btn {
-  border: 1px solid var(--ae-oao-line-strong) !important;
-  border-radius: 999px !important;
+  border: 1px solid #e4e2ed !important;
+  border-radius: 8px !important;
   background: #ffffff !important;
-  color: var(--ae-oao-accent-soft) !important;
+  color: #323b56 !important;
+  font-weight: 600 !important;
   box-shadow: none !important;
 }
 
