@@ -137,7 +137,7 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 .authenty .btn-primary,
 .authenty button[type="submit"],
 .authenty .ae-btn-primary {
-  border: 1px solid #abdad2 !important;
+  border: 1px solid #e4e2ed !important;
   border-radius: 8px !important;
   background: #ffffff !important;
   color: #323b56 !important;
@@ -152,8 +152,8 @@ body:has(.cc-window:not(.cc-invisible)) .cc-revoke {
 .authenty .btn-primary:hover,
 .authenty button[type="submit"]:hover,
 .authenty .ae-btn-primary:hover {
-  background: linear-gradient(to right, #eaf6f4, #fff8ef) !important;
-  border-color: #abdad2 !important;
+  background: #f4f4f9 !important;
+  border-color: #e4e2ed !important;
   color: #323b56 !important;
 }
 
